@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
+/** GENERAL **/
+
 html,
 body {
   height: 100%;
@@ -39,28 +41,11 @@ li {
   padding-right: 20px;
   color: #0a3e79;
   font-size: 3vw;
+  white-space: nowrap;
 }
 
 a {
   text-decoration: none;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.content-img {
-  margin-top: 10vh;
-  margin-bottom: 5vh;
-  width: 90%;
-}
-
-p {
-  margin: 0 25px 25px 25px;
-  font-size: 3vw;
-  text-align: center;
 }
 
 footer {
@@ -73,6 +58,32 @@ footer {
   color: white;
 }
 
+/** INDEX **/
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-img {
+  margin-top: 5vh;
+  margin-bottom: 3vh;
+  width: 90%;
+}
+
+.content-img:first-child {
+  margin-top: 12vh;
+}
+
+p {
+  margin: 0 25px 25px 25px;
+  font-size: 3vw;
+  text-align: center;
+}
+
+/** NOS_JOUEURS **/
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -82,9 +93,65 @@ footer {
 
 .card {
   margin: 10px;
+  border-radius: 8px;
 }
 
 .card-body {
+  border-radius: 8px;
   background-color: #0a3e79;
   color: white;
+}
+
+.card-text {
+  font-size: 15px;
+}
+
+/** NOS_EVENEMENTS **/
+
+.content,
+.content-reverse {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: solid black 1px;
+}
+
+/** MEDIA_QUERIES **/
+
+@media screen and (min-width: 1000px) {
+  .wrapper {
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  li {
+    font-size: 2vw;
+    padding-left: 2vw;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .content {
+    flex-direction: row;
+    padding-left: 2vw;
+  }
+
+  .content-reverse {
+    flex-direction: row-reverse;
+    padding-right: 2vw;
+  }
+
+  .content-img {
+    width: 60%;
+  }
+
+  p {
+    font-size: 1.5vw;
+  }
 }
